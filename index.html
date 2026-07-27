@@ -88,6 +88,24 @@
     font-size: 14px;
   }
 
+  .back-btn{
+    display:block;
+    margin: 0 0 16px auto;
+    background: transparent;
+    border: 1px solid #a855f7;
+    border-radius: 14px;
+    color: #d8b4fe;
+    font-size: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .back-btn:hover{
+    background: rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+  }
+
   .success{
     display:none;
     max-width: 380px;
@@ -141,6 +159,7 @@
   </div>
 
   <div class="box success" id="successBox">
+    <button type="button" id="backBtn" class="back-btn">← Back to Home Page</button>
     <h2>Toms Playfab Tools</h2>
     <div class="tool-grid">
       <div class="tool-tile">Ban All</div>
@@ -178,6 +197,13 @@
       e.preventDefault();
       tryLogin();
     }
+  });
+
+  document.getElementById('backBtn').addEventListener('click', function(){
+    document.getElementById('successBox').style.display = 'none';
+    document.getElementById('loginBox').style.display = 'block';
+    document.getElementById('password').value = '';
+    document.getElementById('errorMessage').textContent = '';
   });
 </script>
 </body>

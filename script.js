@@ -1,6 +1,6 @@
 // SHA-256 hash of the password, NOT the password itself.
 // Anyone reading this file only sees this scrambled string.
-const correctPasswordHash = "00f3cd9dc93af578907d5c6951894ff08401f9aca946cac563de4dd850c5ec66";
+const correctPasswordHash = "454b8d1911501c355b6cc674f65d5c92c0d3c75b92d08cd9923bb52e266a8134";
 
 async function hashText(text) {
   const data = new TextEncoder().encode(text);
